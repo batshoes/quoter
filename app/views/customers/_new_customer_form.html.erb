@@ -1,4 +1,5 @@
 <%= form_for customer, html: {class: "nifty_form"} do |f| %>
+  <h3>Customer Details</h3>
   <% f.label :name %> Name
   <%= f.text_field :name, :required => true %> 
   </br>
@@ -17,7 +18,7 @@
   <% f.label :experience %> Experience
   <%= f.text_field :experience %> 
   </br>
-
+  <h3>Property Details</h3>
   <% f.label :insured_name %> Insured Name
   <%= f.text_field :insured_name %> 
   </br>
@@ -33,7 +34,8 @@
   <% f.label :website %> Website
   <%= f.text_field :website %> 
   </br>
-  
+  <h3>Address</h3>
+  <br>
   <% f.label :address_line_1 %> Address Line 1
   <%= f.text_field :address_line_1 %> 
   </br>
@@ -49,7 +51,7 @@
   <% f.label :post_code %> Post Code
   <%= f.text_field :post_code, :required => true %> 
   </br>
-
+  <h3>Insurance Details</h3>
   <% f.label :advice_type %> Advice Type
   <%= f.text_field :advice_type %> 
   </br>
@@ -68,6 +70,27 @@
   <% f.label :expiry_date %> Expiry Date for Current Insurance
   <%= f.text_field :expiry_date %> 
   </br>
+  <h3>Have You Ever</h3>
+  <% f.label :refused_policy %> Been Refused Policy
+  <%= f.check_box :refused_policy %>
+  </br>
+  <% f.label :refused_claim %> Beem Refused Claim
+  <%= f.check_box :refused_claim %>
+  </br>
+  <% f.label :impose_special_conditions %> Had to Impose Special Conditions
+  <%= f.check_box :impose_special_conditions %>
+  </br>
+  <% f.label :convicted_or_bankrupt %> Been Convicted or Declared Bankrupcy
+  <%= f.check_box :convicted_or_bankrupt %>
+  </br>
+  <% f.label :five_year_claims %> Had a claim in the last 5 years?
+  <%= f.check_box :five_year_claims %>
+  </br>
+  <h4>If YES</h4>
+  <% f.label :property_situation %> Details:
+  <%= f.text_area :property_situation %>
+  </br>
+  <h3>Other</h3>
   <% f.label :notes %> Other Notes
   <%= f.text_area :notes %> 
   </br>

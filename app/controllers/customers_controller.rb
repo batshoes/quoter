@@ -44,6 +44,9 @@ class CustomersController < ApplicationController
                                       :address_line_2, :state, :country, :post_code,
                                       :advice_type, :source, :current_insurer,
                                       :current_broker, :interested_parties,
-                                      :expiry_date, :notes)
+                                      :expiry_date, :notes,:refused_policy, 
+                                      :refused_claim, :impose_special_conditions,
+                                      :convicted_or_bankrupt, :five_year_claims,
+                                      :property_situation)
   end
 end
