@@ -21,6 +21,19 @@ class CustomersController < ApplicationController
     end
   end
 
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    if @customer.update_attributes(customer_params)
+      redirect_to customer_path(@customer), flash: {notice: "Updated!"}
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def customer_params
