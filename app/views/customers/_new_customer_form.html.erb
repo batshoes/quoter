@@ -1,0 +1,75 @@
+<%= form_for customer, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <% f.label :name %> Name
+  <%= f.text_field :name, :required => true %> 
+  </br>
+  <% f.label :email_address %> Email Address
+  <%= f.text_field :email_address, :required => true %> 
+  </br>
+  <% f.label :contact_number %> Contact Number
+  <%= f.text_field :contact_number, :required => true %> 
+  </br>
+  <% f.label :number_after_hours %> After Hours Number
+  <%= f.text_field :number_after_hours %> 
+  </br>
+  <% f.label :occupation %> Occupation
+  <%= f.text_field :occupation %> 
+  </br>
+  <% f.label :experience %> Experience
+  <%= f.text_field :experience %> 
+  </br>
+
+  <% f.label :insured_name %> Insured Name
+  <%= f.text_field :insured_name %> 
+  </br>
+  <% f.label :trading_name %> Trading Name
+  <%= f.text_field :trading_name %> 
+  </br>
+  <% f.label :subsidiaries %> Subsidiaries
+  <%= f.text_field :subsidiaries %> 
+  </br>
+  <% f.label :abn %> ABN
+  <%= f.text_field :abn %> 
+  </br>
+  <% f.label :website %> Website
+  <%= f.text_field :website %> 
+  </br>
+  
+  <% f.label :address_line_1 %> Address Line 1
+  <%= f.text_field :address_line_1 %> 
+  </br>
+  <% f.label :address_line_2 %> Address Line 2
+  <%= f.text_field :address_line_2 %> 
+  </br>
+  <% f.label :state %> State
+  <%= f.text_field :state %> 
+  </br>
+  <% f.label :country %> Country
+  <%= f.text_field :country %> 
+  </br>
+  <% f.label :post_code %> Post Code
+  <%= f.text_field :post_code, :required => true %> 
+  </br>
+
+  <% f.label :advice_type %> Advice Type
+  <%= f.text_field :advice_type %> 
+  </br>
+  <% f.label :source %> Source
+  <%= f.text_field :source %> 
+  </br>
+  <% f.label :current_insurer %> Current Insurer
+  <%= f.text_field :current_insurer %> 
+  </br>
+  <% f.label :current_broker %> Current Broker
+  <%= f.text_field :current_broker %> 
+  </br>
+  <% f.label :interested_parties %> Interested Parties
+  <%= f.text_field :interested_parties %> 
+  </br>
+  <% f.label :expiry_date %> Expiry Date for Current Insurance
+  <%= f.text_field :expiry_date %> 
+  </br>
+  <% f.label :notes %> Other Notes
+  <%= f.text_area :notes %> 
+  </br>
+  <%= f.submit "Create" %>
+<% end %>
