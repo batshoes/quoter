@@ -2,7 +2,7 @@
   <ul>
     <% @customers.each do |customer| %>
       <li>
-        <%= customer.name %> | <%= customer.quotes_count %> Quotes
+        <%= link_to "#{customer.name}", customer_path(customer) %> | <%= customer.quotes_count %> Quotes
       </li>
     <% end %>  
   </ul>
