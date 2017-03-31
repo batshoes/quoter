@@ -1,7 +1,12 @@
 <% if @customers.length > 0 %>
-  <% @customers.each do |customer| %>
-   <%= link_to "#{customer.name}", customer_path(customer) %>
-  <% end %>
+  <ul>
+    <% @customers.each do |customer| %>
+      <li>
+        <%= customer.name %> | <%= customer.quotes_count %> Quotes
+      </li>
+    <% end %>  
+  </ul>
+  
 <% else %>
   <p>No Customers Yet</p>
 <% end %>

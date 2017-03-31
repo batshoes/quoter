@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331044500) do
+ActiveRecord::Schema.define(version: 20170331052611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20170331044500) do
     t.boolean  "convicted_or_bankrupt",     default: false
     t.boolean  "five_year_claims",          default: false
     t.text     "property_situation"
+    t.integer  "quotes_count",              default: 0
+  end
+
+  create_table "quotes", force: :cascade do |t|
   end
 
   create_table "users", force: :cascade do |t|
